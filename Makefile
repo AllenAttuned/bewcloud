@@ -2,6 +2,13 @@
 start:
 	deno task start
 
+
+.PHONY: setup
+setup:
+	$(shell curl -fsSL https://deno.land/install.sh | sh)
+	$(shell echo "export DENO_INSTALL="/home/gitpod/.deno"" >> ~/.bashrc)
+	$(shell echo "export PATH="$DENO_INSTALL/bin:$PATH"" >> ~/.bashrc)
+
 .PHONY: format
 format:
 	deno fmt
