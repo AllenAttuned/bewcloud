@@ -4,13 +4,7 @@ start:
 
 .PHONY: up
 up:
-	docker-compose up
-
-.PHONY: setup
-setup:
-	$(shell curl -fsSL https://deno.land/install.sh | sh)
-	$(shell echo "export DENO_INSTALL="/home/gitpod/.deno"" >> ~/.bashrc)
-	$(shell echo "export PATH="$DENO_INSTALL/bin:$PATH"" >> ~/.bashrc)
+	docker-compose up -d
 
 .PHONY: format
 format:

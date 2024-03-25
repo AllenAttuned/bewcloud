@@ -7,6 +7,12 @@
 image:
   file: .gitpod.Dockerfile
 
+ports:
+  - port: 5432
+    onOpen: ignore
+  - port: 8000
+    onOpen: ignore
+
 tasks:
   - init: make up && make migrate-db
   - command: make start
