@@ -4,9 +4,9 @@
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
-# tasks:
-#   - before: make setup
-#   - init: make start
-
 image:
   file: .gitpod.Dockerfile
+
+tasks:
+  - init: make up && make migrate-db
+  - command: make start

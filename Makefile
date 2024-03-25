@@ -2,6 +2,8 @@
 start:
 	deno task start
 
+.PHONY: up
+	docker-compose up
 
 .PHONY: setup
 setup:
