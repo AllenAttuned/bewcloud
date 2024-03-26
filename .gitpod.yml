@@ -14,5 +14,5 @@ ports:
     onOpen: ignore
 
 tasks:
-  - init: make up && make migrate-db
+  - init: cp .env.example .env && make up && make migrate-db
   - command: make start
